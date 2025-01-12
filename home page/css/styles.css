@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url("../images/galaxy.jpeg");
+  background-size: cover;
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  background: linear-gradient(
+      to right, 
+      #c94b30, #b95b3a, #e49b4d, #f29b49, #f4a261, 
+      #d86b3b, #ac4f32, #9b3b32, #933d3d
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  bottom: 680px;
+  left: 780px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.sidebar {
+  height: 100vh;
+  width: 60px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in;
+}
+
+.sidebar a:hover {
+  color: #f1870f;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.spinner-image {
+  position: absolute;
+  bottom: 150px;
+  left: 29.5%;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  animation: spin 7s linear infinite;
+}
+
+.box {
+  display: none;
+  position: absolute;
+  left: 1270px;
+  width: 300px;
+  height: auto;
+  top: 270px;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: rgb(204, 85, 0);
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(204, 85, 0, 0.6), 0 8px 16px rgba(204, 85, 0, 0.3);
+}
+
+.info-container {
+  display: flex;
+  position: absolute;
+  bottom: 130px;
+  left: 42.5%;
+  margin-top: 15px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f0f8ff, #ffcc99);
+  border: 2px solid rgba(204, 85, 0, 0.7);
+  color: black;
+  padding: 16px 23px;
+  animation: pulse 4s infinite;
+  box-shadow: 0 4px 8px rgba(204, 85, 0, 0.6), 0 12px 16px rgba(204, 85, 0, 0.3);
+}
+
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
