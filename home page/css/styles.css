@@ -20,13 +20,10 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  bottom: 680px;
-  left: 780px;
+  bottom: 685px;
+  left: 815px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
-
-
-
 
 .sidebar {
   height: 100vh;
@@ -36,6 +33,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7); 
 }
 
 .sidebar a {
@@ -46,11 +44,12 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s ease-in;
+  transition: 0.3s ease-in-out;
+  transform: scale(1);
 }
 
 .sidebar a:hover {
-  color: #f1870f;
+  transform: scale(1.2);
 }
 
 @keyframes spin {
@@ -93,7 +92,7 @@ h1 {
   display: flex;
   position: absolute;
   bottom: 130px;
-  left: 42.5%;
+  left: 37.8%;
   margin-top: 15px;
   border-radius: 50px;
   background: linear-gradient(135deg, #f0f8ff, #ffcc99);
