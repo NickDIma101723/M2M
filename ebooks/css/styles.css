@@ -5,6 +5,7 @@ body {
     overflow: hidden;
     background-image: url("../images/galaxy.jpeg");
     background-size: cover;
+    animation: spaceBackground 10s infinite linear;
   }
 
   .sidebar {
@@ -16,6 +17,7 @@ body {
     align-items: center;
     padding-top: 20px;
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7); 
+    z-index: 1;
   }
   
   .sidebar a {
@@ -32,6 +34,26 @@ body {
   
   .sidebar a:hover {
     transform: scale(1.2);
+    color: #ff4500;
+  }
+
+  .sidebar a i {
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+  }
+
+  .sidebar a:hover i {
+    transform: scale(1.2);
+    color: #ff4500;
+  }
+
+  
+  @keyframes spaceBackground {
+    0% {
+      background-position: center;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
   }
 
   [main-content] {

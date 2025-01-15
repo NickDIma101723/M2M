@@ -1,8 +1,121 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: url("../images/galaxy.jpeg");
-    background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url("../images/galaxy.jpeg");
+  background-size: cover;
+  animation: spaceBackground 10s infinite linear;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 60px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+  transform: scale(1);
+}
+
+.sidebar a:hover {
+  transform: scale(1.2);
+  color: #ff4500; 
+}
+
+.sidebar a i {
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.sidebar a:hover i {
+  transform: scale(1.2); 
+  color: #ff4500; 
+}
+
+@keyframes spaceBackground {
+  0% {
+    background-position: center;
   }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  position: relative;
+  top: -890px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  transition: background 0.3s;
+}
+
+.tabs button.active {
+  background-color: #eb380c;
+}
+
+.tabs button:hover {
+  background: linear-gradient(to right, #ff007f, #ff00cc, #8e2de2);
+}
+
+.tab-content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  top: -870px;
+}
+
+.tab-content-item {
+  display: none;
+}
+
+.tab-content-item.active {
+  display: block;
+}
+
+video {
+  border: 2px solid #ff4500;
+  border-radius: 10px;
+  max-width: 750px;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 45.5%;
+  background: linear-gradient(to right, #ff4500, #d35400, #8b0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 2rem;
+}
