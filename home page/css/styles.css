@@ -102,7 +102,7 @@ h1 {
   display: flex;
   position: absolute;
   bottom: 130px;
-  left: 37.8%;
+  left: 36.8%;
   margin-top: 15px;
   border-radius: 50px;
   background: linear-gradient(135deg, #f0f8ff, #ffcc99);
@@ -111,19 +111,6 @@ h1 {
   padding: 16px 23px;
   animation: pulse 4s infinite;
   box-shadow: 0 4px 8px rgba(204, 85, 0, 0.6), 0 12px 16px rgba(204, 85, 0, 0.3);
-}
-
-
-@keyframes pulse {
-  0% {
-      transform: scale(1);
-  }
-  50% {
-      transform: scale(1.05);
-  }
-  100% {
-      transform: scale(1);
-  }
 }
 
 
