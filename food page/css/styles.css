@@ -107,19 +107,22 @@ body {
   font-size: 35px;
   position: relative;
   padding-bottom: 10px;
-  color: #ff6347;
+  background: linear-gradient( to right, orange, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: glowText 2s ease-in-out infinite;
 }
 
 @keyframes glowText {
   0% {
-    text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 15px #ff4500;
+    text-shadow: 0 0 10px #ff4500;
   }
   50% {
-    text-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500;
+    text-shadow: 0 0 20px #ff4500;
   }
   100% {
-    text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 15px #ff4500;
+    text-shadow: 0 0 10px #ff4500;
   }
 }
 

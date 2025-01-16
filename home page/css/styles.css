@@ -20,7 +20,7 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  bottom: 685px;
+  bottom: 825px;
   left: 815px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
@@ -102,7 +102,7 @@ h1 {
   display: flex;
   position: absolute;
   bottom: 130px;
-  left: 36.8%;
+  left: 37%;
   margin-top: 15px;
   border-radius: 50px;
   background: linear-gradient(135deg, #f0f8ff, #ffcc99);

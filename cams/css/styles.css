@@ -63,7 +63,19 @@ body {
   margin-top: 20px;
   gap: 20px;
   position: relative;
-  top: -890px;
+  top: -950px;
+}
+
+@keyframes glowText{
+  0% {
+    text-shadow: 0 0 10px #ff4500;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff4500;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff4500;
+  }
 }
 
 .tabs button {
@@ -72,7 +84,7 @@ body {
   color: white;
   font-size: 20px;
   cursor: pointer;
-  border-radius: 5px 5px 0 0;
+  border-radius: 40px;
   transition: background 0.3s;
 }
 
@@ -81,7 +93,7 @@ body {
 }
 
 .tabs button:hover {
-  background: linear-gradient(to right, #ff007f, #ff00cc, #8e2de2);
+  background: linear-gradient(to right, #ff4500, #d35400, #8b0000);
 }
 
 .tab-content {
@@ -90,7 +102,7 @@ body {
   justify-content: center;
   margin-top: 20px;
   position: relative;
-  top: -870px;
+  top: -900px;
 }
 
 .tab-content-item {
@@ -118,4 +130,5 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-size: 2rem;
+  animation: glowText 2s ease-in-out infinite;
 }
