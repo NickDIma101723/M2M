@@ -1,46 +1,99 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: url("../images/galaxy.jpeg");
-    background-size: cover;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/galaxy.jpeg");
+  background-size: cover;
+  overflow: hidden;
+}
+
 .sidebar {
-    height: 100vh;
-    width: 60px;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7); 
-    z-index: 1;
-  }
-  
-  .sidebar a {
-    text-decoration: none;
-    color: white;
-    margin: 20px 0;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-    transform: scale(1);
-  }
-  
-  .sidebar a:hover {
-    transform: scale(1.2);
-  }
+  height: 100vh;
+  width: 60px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
 
-  .sidebar a i {
-    transition: transform 0.3s ease-in-out, color 0.3s ease;
-  }
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  transform: scale(1);
+}
 
-  .sidebar a:hover i {
-    transform: scale(1.2);
-    color: #ff4500;
-  }
+.sidebar a:hover {
+  transform: scale(1.2);
+}
+
+.sidebar a i {
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.sidebar a:hover i {
+  transform: scale(1.2);
+  color: #ff4500;
+}
+h1{
+ position: absolute;
+ left: 45%;
+ top: 5%;
+  color: #ff4500;
+}
+#gym {
+position: absolute;
+top: 150px;
+left: 29%;
+width: 950px;
+height: 500px;
+border-radius: 10px;
+}
+#container{
+display: flex;
+gap: 150px;
+position: absolute;
+top: 60%;
+left: 25%;
+padding: 20px;
+}
+.card{
+color: white;
+background-color: #ff4500;
+padding: 20px;
+width: 250px;
+height: 250px;
+text-align: center;
+
+}
+.card2{
+color: white;
+background-color: #ff4500;
+padding: 20px;
+width: 250px;
+height: 250px;
+text-align: center;
+
+}
+.card3{
+color: white;
+background-color: #ff4500;
+padding: 20px;
+width: 250px;
+height: 320px;
+text-align: center;
+
+#dots {
+  display: inline;
+}
+}
+#more {display: none;
+}
