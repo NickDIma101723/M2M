@@ -62,41 +62,6 @@ h1 {
   color: #ff4500;
 }
 
-@keyframes spin {
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(360deg);
-  }
-}
-
-.spinner-image {
-  position: absolute;
-  bottom: 150px;
-  left: 29.5%;
-  max-width: 800px;
-  width: 100%;
-  height: auto;
-  animation: spin 7s linear infinite;
-}
-
-.box {
-  display: none;
-  position: absolute;
-  left: 1270px;
-  width: 300px;
-  height: auto;
-  top: 270px;
-  margin-left: 20px;
-  padding: 10px;
-  background-color: rgb(204, 85, 0);
-  border-radius: 5px;
-  font-size: 16px;
-  text-align: center;
-  color: white;
-  box-shadow: 0 4px 8px rgba(204, 85, 0, 0.6), 0 8px 16px rgba(204, 85, 0, 0.3);
-}
 
 .info-container {
   display: flex;
@@ -129,4 +94,14 @@ span {
   display: flex;
   flex-direction: column;
   margin-top: 5px;
+}
+
+model-viewer {
+  position: absolute;
+  top: 7%;
+  left: 35%;
+  width: 100%;
+  max-width: 550px; 
+  height: 500px; 
+  margin-bottom: 20px; 
 }
