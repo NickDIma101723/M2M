@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <div class="sidebar">
+            <a href="../home page/home.html"><i class="fas fa-home"></i></a>
+            <a href="#"> <i class="fa-solid fa-plane-departure"></i></a>
+            <a href="#"><i class="fa-solid fa-music"></i></a>
+            <a href="../info page/info.html"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#"><i class="fa-solid fa-dumbbell"></i></a>
+            <a href="../food page/food.html"><i class="fa-solid fa-utensils"></i></a>
+            <a href="#"><i class="fa-solid fa-vr-cardboard"></i></a>
+            <a href="#"><i class="fa-solid fa-gamepad"></i></a>
+            <a href="../cams/cams.html"><i class="fa-solid fa-camera-retro"></i></a>
+            <a href="#"><i class="fa-solid fa-film"></i></a>
+            <a href="#"><i class="fa-solid fa-music"></i></a>
+            <a href="../ebooks/ebooks.html"><i class="fa-solid fa-book"></i></a>
+        </div>
+    </header>
+
+    <h1>Movie</h1>
+
+    <div class="movies">
+        <img src="images/Avengers.jpg" alt="Avengers">
+        <img src="images/Batman.jpg" alt="Batman">
+        <img src="images/Fall guy.jpg" alt="Fall guy">
+        <img src="images/Transformers.jpg" alt="Guardians of the Galaxy">
+        <img src="images/Gladiator.jpg" alt="Gladiator">
+        <img src="images/Lord of the rings.jpg" alt="Lord of the Rings">
+        <img src="images/Guardians.jpg" alt="Guardians of the Galaxy">
+        <button  class="btn1" onclick="prevMovie()">Prev</button>
+        <button class="btn2" onclick="nextMovie()">Next</button>
+    </div>
+
+    <div class="info-movies">
+        <div class="movie-card">
+            <img src="images/Batman.jpg" alt="The Dark Knight" class="movie-poster" id="movie-poster">
+            <div class="movie-details">
+                <h3 id="movie-title">The Dark Knight</h3>
+                <p id="movie-duration">2hrs en 32min 2008</p>
+                <p id="movie-description">The Dark Knight is a superhero film written and directed by Christopher Nolan. Based on the Batman cartoons, the film is a sequel to Batman Begins, which is a reboot of the Batman series. Christian Bale stars.</p>
+                <button class="btn" onclick="playVid()">Watch</button>
+            </div>
+        </div>
+        <video id="video" controls autoplay loop>
+            <source src="placeholders/videos/placeholder-16x9.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>
