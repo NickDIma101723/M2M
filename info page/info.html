@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info page</title>
+    <script src="js/script.js" defer></script>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="sidebar">
+            <a href="../home page/home.html"><i class="fas fa-home"></i></a>
+            <a href="#"> <i class="fa-solid fa-plane-departure"></i></a>
+            <a href="#"><i class="fa-solid fa-music"></i></a>
+            <a href="../info page/info.html"><i class="fa-solid fa-circle-info"></i></a>
+            <a href="#"><i class="fa-solid fa-dumbbell"></i></a>
+            <a href="../food page/food.html"><i class="fa-solid fa-utensils"></i></a>
+            <a href="#"><i class="fa-solid fa-vr-cardboard"></i></a>
+            <a href="#"><i class="fa-solid fa-gamepad"></i></a>
+            <a href="../cams/cams.html"><i class="fa-solid fa-camera-retro"></i></a>
+            <a href="#"><i class="fa-solid fa-film"></i></a>
+            <a href="#"><i class="fa-solid fa-music"></i></a>
+            <a href="../ebooks/ebooks.html"><i class="fa-solid fa-book"></i></a>
+          </div>
+    </header>
+
+    <h1>Info</h1>
+
+    <div class="centered-container">
+    
+ 
+        <model-viewer
+        src="model/space_ship_torb.glb"
+        alt="3D-model van Mars"
+        auto-rotate 
+        camera-controls 
+        style="width: 100%; height: 1550px;">
+        </model-viewer>
+     
+    </div>
+
+    <button></button>
+    
+    <div class="slider">
+    <div class="info-content">
+        <div id="slide1" class="info1 active"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt non ullam error, pariatur qui commodi enim fugit voluptatibus odio at vel veritatis animi reprehenderit dignissimos magnam. Doloremque error possimus perferendis.</p></div>
+        <div id="slide2"class="info2"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatibus, ipsum accusamus ducimus corrupti sed voluptatum earum tempora dignissimos perferendis nulla voluptates aliquid ratione vero quis repellat praesentium, facere recusandae?</p></div>
+        <div id="slide3" class="info3"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolore fuga ipsam repellat laborum asperiores possimus sed sapiente quod aliquid quam, architecto doloremque vero ratione cumque debitis quasi voluptates. Nemo!</p></div>
+        <button id="prev" class="btn1"><</button>
+        <button id="next" class="btn2">></button>
+
+    </div>
+</div>
+    
+</body>
+</html>

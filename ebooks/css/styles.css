@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+
     background-image: url("../images/galaxy.jpeg");
     background-size: cover;
     animation: spaceBackground 10s infinite linear;
@@ -142,3 +142,28 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
+h1{
+  position: relative;
+  top: -950px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to right, #ff4500, #ff6347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  font-size: 40px;
+  animation: glowText 2s ease-in-out infinite;
+}
+
+@keyframes glowText{
+  0% {
+    text-shadow: 0 0 10px #ff4500;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff4500;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff4500;
+  }
+} 
