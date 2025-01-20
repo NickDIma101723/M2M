@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
   background-image: url("../images/galaxy.jpeg");
   background-size: cover;
 }
@@ -26,6 +26,7 @@ body {
 
 .navbar{
   position: absolute;
+  z-index: 100;
   left: 0;
   top: 0;
 }
@@ -39,7 +40,6 @@ body {
   align-items: center;
   padding-top: 20px;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7);
-  z-index: 1; 
 }
 
 .sidebar a {
@@ -107,5 +107,6 @@ span {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
 }
