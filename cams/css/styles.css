@@ -1,11 +1,45 @@
 body {
-  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+ overflow: hidden;
   background-image: url("../images/galaxy.jpeg");
   background-size: cover;
   animation: spaceBackground 10s infinite linear;
+}
+
+.main-content h1 {
+  text-transform: capitalize;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+  background: linear-gradient( to right, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  animation: glowText 2s ease-in-out infinite;;
+}
+
+
+@keyframes glowText {
+  0% {
+      text-shadow: 0 0 10px #ff4500;
+  }
+  50% {
+      text-shadow: 0 0 20px #ff4500;
+  }
+  100% {
+      text-shadow: 0 0 10px #ff4500;
+  }
+}
+
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .sidebar {
@@ -17,8 +51,6 @@ body {
   align-items: center;
   padding-top: 20px;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7);
-  position: relative;
-  z-index: 1;
 }
 
 .sidebar a {
@@ -29,13 +61,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease-in-out, color 0.3s ease;
+  transition: 0.3s ease-in-out;
   transform: scale(1);
 }
 
 .sidebar a:hover {
   transform: scale(1.2);
-  color: #ff4500; 
 }
 
 .sidebar a i {
@@ -43,39 +74,26 @@ body {
 }
 
 .sidebar a:hover i {
-  transform: scale(1.2); 
-  color: #ff4500; 
+  transform: scale(1.2);
+  color: #ff4500;
 }
 
-@keyframes spaceBackground {
-  0% {
-    background-position: center;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+
+
+.main-content {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  padding: 20px;
 }
 
 .tabs {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-bottom: 30px;
   gap: 20px;
-  position: relative;
-  top: -950px;
-}
-
-@keyframes glowText{
-  0% {
-    text-shadow: 0 0 10px #ff4500;
-  }
-  50% {
-    text-shadow: 0 0 20px #ff4500;
-  }
-  100% {
-    text-shadow: 0 0 10px #ff4500;
-  }
 }
 
 .tabs button {
@@ -85,33 +103,20 @@ body {
   font-size: 20px;
   cursor: pointer;
   border-radius: 40px;
-  transition: background 0.3s;
-}
-
-.tabs button.active {
-  background-color: #eb380c;
+  transition: 0.3s ease-in-out;
 }
 
 .tabs button:hover {
-  background: linear-gradient(to right, #ff4500, #d35400, #8b0000);
+color: #d31010;
 }
 
 .tab-content {
   display: flex;
-  gap: 20px;
   justify-content: center;
-  margin-top: 20px;
   position: relative;
-  top: -900px;
+  bottom: 150px;
 }
 
-.tab-content-item {
-  display: none;
-}
-
-.tab-content-item.active {
-  display: block;
-}
 
 video {
   border: 2px solid #ff4500;

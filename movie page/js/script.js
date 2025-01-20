@@ -94,10 +94,12 @@ function playVid() {
             videoPlayer.requestFullscreen();
         }
 
-    } else {
-        videoPlayer.style.display = "none";
-        videoPlayer.pause();
     }
 }
 
 showMovie(currentMovieIndex);
+
+function stopVid() {
+    videoPlayer.pause();
+    videoPlayer.style.display = "none";
+}

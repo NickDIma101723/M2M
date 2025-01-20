@@ -6,23 +6,38 @@ body {
     background-image: url("../images/galaxy.jpeg");
     background-size: cover;
   }
+
+  .navbar{
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+  }
+  
   
   h1 {
-    position: absolute;
+   position: absolute;
+    bottom: 85%;
+    left: 48%;
     color: white;
-    font-size: 5rem;
     text-align: center;
-    background: linear-gradient(
-        to right, 
-        #c94b30, #b95b3a, #e49b4d, #f29b49, #f4a261, 
-        #d86b3b, #ac4f32, #9b3b32, #933d3d
-    );
+    background: linear-gradient( to right, orange, red);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
-    bottom: 800px;
-    left: 900px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    font-size: 40px;
+    animation: glowText 2s ease-in-out infinite;
+  }
+  
+  @keyframes glowText {
+    0% {
+        text-shadow: 0 0 10px #ff4500;
+    }
+    50% {
+        text-shadow: 0 0 20px #ff4500;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff4500;
+    }
   }
   
   .sidebar {
@@ -61,16 +76,20 @@ body {
     transform: scale(1.2);
     color: #ff4500;
   }
-  
 
-.movies{
-  display: flex;
-    flex-wrap: wrap;
+  .movies-container {
+    display: flex;
     justify-content: center;
-    gap: 45px;
-    position: relative;
-    left: 30px;
-    bottom: 350px;
+    align-items: center;
+    padding: 20px;
+  }
+  
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  position: relative;
+  top: 620px;
 }
 
 .movies img{
@@ -88,34 +107,46 @@ body {
 
 .btn1{
   position: absolute;
-  left: 120px;
+  left: -120px;
   bottom: 120px;
-  background-color: #ff4500;
+  background: linear-gradient(45deg, #7f0f0f, #a93226);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   border-radius: 5px;
-  margin: 0 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(128, 17, 17, 0.5);;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn1:hover {
+  background: linear-gradient(45deg, #932121, #c0392b);
+  transform: rotate(3deg) scale(1.1);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.7); 
 }
 
 .btn2{
+  background: linear-gradient(45deg, #d35400, #e67e22);
   position: absolute;
-  right: 120px;
-  bottom: 120px;
-  background-color: #ff4500;
+  right: -120px;
+  bottom: 115px;
+  box-shadow: 0 4px 15px rgba(211, 84, 0, 0.5);
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   border-radius: 5px;
   margin: 0 10px;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn1:hover, .btn2:hover {
-  background-color: #e03e00;
+.btn2:hover {
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  transform: rotate(-3deg) scale(1.1);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.7); 
 }
 
 .info-movies{
@@ -166,12 +197,45 @@ body {
   }
 
 .movie-details .btn{
-    background-color: #ff4500;
+  background: linear-gradient(45deg, #d35400, #e67e22);
     color: white;
+    box-shadow: 0 4px 15px rgba(148, 87, 45, 0.5);
+    max-width: 120px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.movie-details .btn:hover {
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(204, 100, 55, 0.7); 
+}
+
+.movie-details .btn3{
+  background: linear-gradient(45deg, #7f0f0f, #a93226);
+  max-width: 50px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
+  padding: 15px 15px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+  left: 150px;
+  bottom: 38.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.movie-details .btn3:hover {
+  background: linear-gradient(45deg, #932121, #c0392b);
+  transform: scale(1.2);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.8); 
 }
 
 #video {
