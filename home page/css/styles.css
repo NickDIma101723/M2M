@@ -2,13 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   background-image: url("../images/galaxy.jpeg");
   background-size: cover;
 }
 
-h1 {
-  position: absolute;
+
+
+.container h1 {
   color: white;
   font-size: 5rem;
   text-align: center;
@@ -20,9 +21,13 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  bottom: 800px;
-  left: 765px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.navbar{
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .sidebar {
@@ -63,30 +68,26 @@ h1 {
 }
 
 
-.info-container {
+.container ul {
   display: flex;
-  position: absolute;
-  bottom: 130px;
-  left: 37%;
+  align-items: center;
+  justify-content: center;
   margin-top: 15px;
   border-radius: 50px;
   background: linear-gradient(135deg, #f0f8ff, #ffcc99);
   border: 2px solid rgba(204, 85, 0, 0.7);
+  list-style-type: none;
+  margin: 0;
   color: black;
-  padding: 16px 23px;
-  animation: pulse 4s infinite;
+padding: 10px;
+max-width: 700px;
   box-shadow: 0 4px 8px rgba(204, 85, 0, 0.6), 0 12px 16px rgba(204, 85, 0, 0.3);
 }
 
 
-ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
 
-li {
+
+.container li {
   margin: 0 10px;
 }
 
@@ -96,12 +97,10 @@ span {
   margin-top: 5px;
 }
 
-model-viewer {
-  position: absolute;
-  top: 7%;
-  left: 35%;
-  width: 100%;
-  max-width: 550px; 
-  height: 500px; 
-  margin-bottom: 20px; 
+.container model-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 20px;
 }
