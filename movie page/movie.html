@@ -17,7 +17,6 @@
         <div class="sidebar">
           <a href="home.html"><i class="fas fa-home"></i></a>
           <a href="#"> <i class="fa-solid fa-plane-departure"></i></a>
-          <a href="#"><i class="fa-solid fa-music"></i></a>
           <a href="../info page/info.html"><i class="fa-solid fa-circle-info"></i></a>
           <a href="#"><i class="fa-solid fa-dumbbell"></i></a>
           <a href="../food page/food.html"><i class="fa-solid fa-utensils"></i></a>
@@ -33,14 +32,19 @@
      <div class="movies-container">
         <h1>Movie</h1>
     
-        <div class="movies">
-            <img src="images/Avengers.jpg" alt="Avengers">
-            <img src="images/Batman.jpg" alt="Batman">
-            <img src="images/Fall guy.jpg" alt="Fall guy">
-            <img src="images/Transformers.jpg" alt="Guardians of the Galaxy">
-            <img src="images/Gladiator.jpg" alt="Gladiator">
-            <img src="images/Lord of the rings.jpg" alt="Lord of the Rings">
-            <img src="images/Guardians.jpg" alt="Guardians of the Galaxy">
+        <div class="movies-wrapper">
+            <div class="movies">
+                <img src="images/boys.jpg" alt="Bad boys">
+                <img src="images/sonic.jpg" alt="Sonic">
+                <img src="images/x.jpg" alt="Fast and fourious">
+                <img src="images/Avengers.jpg" alt="Avengers">
+                <img src="images/Batman.jpg" alt="Batman">
+                <img src="images/Fall guy.jpg" alt="Fall guy">
+                <img src="images/Transformers.jpg" alt="Transformers">
+                <img src="images/Gladiator.jpg" alt="Gladiator">
+                <img src="images/Lord of the rings.jpg" alt="Lord of the Rings">
+                <img src="images/Guardians.jpg" alt="Guardians of the Galaxy">
+            </div>
             <button class="btn1" onclick="prevMovie()">Prev</button>
             <button class="btn2" onclick="nextMovie()">Next</button>
         </div>
@@ -52,14 +56,20 @@
                     <h3 id="movie-title">The Dark Knight</h3>
                     <p id="movie-duration">2hrs en 32min 2008</p>
                     <p id="movie-description">The Dark Knight is a superhero film written and directed by Christopher Nolan. Based on the Batman cartoons, the film is a sequel to Batman Begins, which is a reboot of the Batman series. Christian Bale stars.</p>
-                    <button class="btn" onclick="playVid()">Watch</button>
-                    <button class="btn3" onclick="stopVid()">X</button>
+                    <button class="btn" onclick="openVideo()">Watch</button>
                 </div>
             </div>
-            <video id="video" controls autoplay loop>
+        </div>
+    </div>
+
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <button class="btn3" onclick="closeVideo()">X</button>
+            <video id="video" controls>
                 <source src="placeholders/videos/placeholder-16x9.mp4" type="video/mp4">
             </video>
         </div>
     </div>
+
 </body>
 </html>

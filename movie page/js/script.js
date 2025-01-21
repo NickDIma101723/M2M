@@ -49,7 +49,31 @@ const movies = [
         description: 'Transformers: Rise of the Beasts is a science fiction action film directed by Steven Caple Jr. It is the seventh installment in the Transformers film series.',
         image: 'images/Transformers.jpg',
         video: 'placeholders/videos/placeholder-16x9.mp4'
+    },
+    {
+        title: 'Sonic the Hedgehog',
+        duration: '1hr 40min 2020',
+        description: 'Sonic the Hedgehog is an action-adventure comedy film based on the popular video game franchise, starring Ben Schwartz as Sonic.',
+        image: 'images/sonic.jpg',
+        video: 'placeholders/videos/placeholder-16x9.mp4'
+    },
+    {
+        title: 'Bad Boys 4',
+        duration: '2hrs 0min 2024',
+        description: 'Bad Boys 4 continues the adventures of Mike Lowrey and Marcus Burnett, directed by Adil & Bilall.',
+        image: 'images/boys.jpg',
+        video: 'placeholders/videos/placeholder-16x9.mp4'
+    },
+    {
+        title: 'Fast X',
+        duration: '2hrs 22min 2023',
+        description: 'Fast X is the tenth installment in the Fast & Furious franchise, featuring high-octane car chases and daring stunts.',
+        image: 'images/x.jpg',
+        video: 'placeholders/videos/placeholder-16x9.mp4'
     }
+
+
+    
 ];
 
 const moviePoster = document.getElementById('movie-poster');
@@ -67,39 +91,43 @@ function showMovie(info) {
     videoPlayer.src = movie.video;
 }
 
-function nextMovie() {
-    if (currentMovieIndex + 1 >= movies.length) {
-        currentMovieIndex = 0; 
-    } else {
-        currentMovieIndex++;  
+function sliderCarousel() {
+    const sliderImages = document.querySelectorAll('.movies img');
+    for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].src = movies[(currentMovieIndex + i) % movies.length].image;
     }
-    showMovie(currentMovieIndex);
 }
 
-function prevMovie(){
-    if (currentMovieIndex - 1 < 0){
-        currentMovieIndex = movies.length - 1;
+function nextMovie() {
+    if (currentMovieIndex + 1 >= movies.length) {
+        currentMovieIndex = 0;
+    } else {
+        currentMovieIndex++;
     }
-    else {
+    showMovie(currentMovieIndex);
+    sliderCarousel();  
+}
+
+function prevMovie() {
+    if (currentMovieIndex - 1 < 0) {
+        currentMovieIndex = movies.length - 1;
+    } else {
         currentMovieIndex--;
     }
     showMovie(currentMovieIndex);
+    sliderCarouse();  
 }
 
-function playVid() {
-    if (videoPlayer.style.display === "none" || videoPlayer.style.display === "") {
-        videoPlayer.style.display = "block";
-        videoPlayer.play();
-        if (videoPlayer.requestFullscreen) {
-            videoPlayer.requestFullscreen();
-        }
+function openVideo() {
+    document.getElementById('video-modal').style.display = 'block';
+    document.getElementById('video').play();
+}
 
-    }
+function closeVideo() {
+    document.getElementById('video-modal').style.display = 'none';
+    document.getElementById('video').pause();
+    document.getElementById('video').currentTime = 0;
 }
 
 showMovie(currentMovieIndex);
-
-function stopVid() {
-    videoPlayer.pause();
-    videoPlayer.style.display = "none";
-}
+sliderCarouse();
