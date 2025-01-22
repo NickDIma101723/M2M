@@ -97,24 +97,30 @@ body {
 }
 
 .tabs button {
-  padding: 10px 20px;
-  background-color: #ff4500;
+  background: linear-gradient(45deg, #d35400, #e67e22);
+  box-shadow: 0 4px 15px rgba(211, 84, 0, 0.5);
   color: white;
-  font-size: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  margin: 0 10px;
   cursor: pointer;
-  border-radius: 40px;
-  transition: 0.3s ease-in-out;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
+
+
 
 .tabs button:hover {
-color: #d31010;
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(204, 100, 55, 0.7); 
 }
-
 .tab-content {
   display: flex;
   justify-content: center;
   position: relative;
-  bottom: 150px;
+  bottom: 180px;
 }
 
 

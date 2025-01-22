@@ -3,7 +3,8 @@ let currentIndex = 0;
 const slides = [
     document.getElementById("slide1"),
     document.getElementById("slide2"),
-    document.getElementById("slide3")
+    document.getElementById("slide3"),
+    document.getElementById("slide4")
 ]
 
  function showSlide(slide)  {

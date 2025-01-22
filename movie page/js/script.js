@@ -115,7 +115,7 @@ function prevMovie() {
         currentMovieIndex--;
     }
     showMovie(currentMovieIndex);
-    sliderCarouse();  
+    sliderCarousel();  
 }
 
 function openVideo() {
@@ -130,4 +130,4 @@ function closeVideo() {
 }
 
 showMovie(currentMovieIndex);
-sliderCarouse();
+
