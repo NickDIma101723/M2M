@@ -64,68 +64,43 @@ body {
   transform: scale(1.2);
   color: #ff4500;
 }
-
-
-h1 {
+#title{
   position: absolute;
-  left: 45%;
-  top: 5%;
-  color: #ff4500;
-}
-
-#gym {
-  position: absolute;
-  top: 120px;
-  left: 29%;
-  width: 1000px;
-  height: 500px;
-  border-radius: 15px;
-}
-
-#container {
-  display: flex;
-  gap: 100px;
-  position: absolute;
-  top: 57%;
-  left: 30%;
-  padding: 20px;
-  
-}
-.card, .card2 {
   color: white;
-  background-color: #ff4500;
-  padding: 20px;
-  width: 200px;
-  height: 250px;
+  font-size: 5rem;
   text-align: center;
-  border-radius: 15px;
-
+  background: linear-gradient(
+      to right, 
+      #c94b30, #b95b3a, #e49b4d, #f29b49, #f4a261, 
+      #d86b3b, #ac4f32, #9b3b32, #933d3d
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  bottom: 800px;
+  left: 900px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
-
-.card3 {
-  color: white;
-  background-color: #ff4500;
-  padding: 20px;
-  width: 200px;
+.images{
+  position: relative;
+  top: 75px;
+  left: 5%;
   height: auto;
-  text-align: center;
-  border-radius: 15px;
+  max-height: 10%;
+ width: auto;
+ max-width: 15%;
+  padding: 37px;
 }
-
-#more-content {
-  display: none;
-}
-
-.read-more-btn {
-  background-color: red;
+.btn{
   color: white;
+  background-color: gray;
+  position: relative;
+  top: 75px;
+  right: 130px;
   padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+  margin: 0px 10px;
 }
+.btn:hover{
+  background-color: #e03e00;
 
-.read-more-btn:hover {
-  background-color: green
-  ;
 }
