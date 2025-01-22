@@ -1,128 +1,164 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url("../images/galaxy.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  animation: spaceBackground 10s infinite linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    background-image: url("../images/galaxy.jpeg");
-    background-size: cover;
-    animation: spaceBackground 10s infinite linear;
-  }
+.navbar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
-  .sidebar {
-    height: 100vh;
-    width: 60px;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7); 
-    z-index: 1;
-  }
-  
-  .sidebar a {
-    text-decoration: none;
-    color: white;
-    margin: 20px 0;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-in-out;
-    transform: scale(1);
-  }
-  
-  .sidebar a:hover {
-    transform: scale(1.2);
-    color: #ff4500;
-  }
+.sidebar {
+  height: 100vh;
+  width: 60px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
 
-  .sidebar a i {
-    transition: transform 0.3s ease-in-out, color 0.3s ease;
-  }
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  transform: scale(1);
+}
 
-  .sidebar a:hover i {
-    transform: scale(1.2);
-    color: #ff4500;
-  }
+.sidebar a:hover {
+  transform: scale(1.2);
+  color: #ff4500;
+}
 
-  
-  @keyframes spaceBackground {
-    0% {
+.sidebar a i {
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.sidebar a:hover i {
+  transform: scale(1.2);
+  color: #ff4500;
+}
+
+@keyframes spaceBackground {
+  0% {
       background-position: center;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
   }
-
-  [main-content] {
-    display: flex;
-    gap: 70px; 
-    margin-top: -850px; 
-    margin-left: 450px; 
+  100% {
+      background-position: 100% 100%;
+  }
 }
 
-[main-content] div {
-    width: 250px; 
-    height: auto; 
-    background-color:#5a1e1e ;
-    border: 2px solid #ff4500;
-    transition:transform 0.3s ease-in-out;
+h1 {
+  margin-top: 100px;
+  text-transform: capitalize;
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 10px;
+  background: linear-gradient( to right, orange, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 2s ease-in-out infinite;
 }
 
-[main-content] div:hover{
+@keyframes glowText {
+  0% {
+      text-shadow: 0 0 10px #ff4500;
+  }
+  50% {
+      text-shadow: 0 0 20px #ff4500;
+  }
+  100% {
+      text-shadow: 0 0 10px #ff4500;
+  }
+}
+
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.book1, .book2, .book3, .book4 {
+  width: 250px;
+  height: auto;
+  background-color: #5a1e1e;
+  border: 2px solid #ff4500;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book1:hover, .book2:hover, .book3:hover, .book4:hover {
   transform: scale(1.05);
   box-shadow: 10px 10px 30px #ff4500;
 }
 
-  img {
-    max-width: 300px;
-    width: 100%;
-    height: 350px;
-    object-fit: contain;
-    border: 2px solid #ff4500; 
-  }
-
-  button {
-    background-color: #ff4500; 
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left: 10px;
-    transition: 0.3s ease-in-out;
-  }
-
-  button:hover {
-    background-color: rgb(138, 23, 23, 0.8);
-  }
-
-  .icon-container {
-    position: relative;
-    display: inline-block;
-    text-align: center;
+img {
+  max-width: 300px;
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border: 2px solid #ff4500;
 }
 
-.icon-container i{
+button {
+  background-color: #ff4500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(138, 23, 23, 0.8);
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.icon-container i {
   text-decoration: none;
   color: white;
   font-size: 24px;
-  position: absolute;
-  left: 93%;
-  bottom: 25px;
+  margin-left: 140px;
   cursor: pointer;
   transition: opacity 0.3s, visibility 0.3s ease-in-out;
 }
 
 .icon-container i:hover {
-  color: #ff6347; 
+  color: #ff6347;
 }
 
-.hover-text{
+.hover-text {
   visibility: hidden;
   width: 320px;
   background-color: rgb(128, 47, 47);
@@ -131,39 +167,13 @@ body {
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  top: 55px;
+  top: 65px;
   left: 15px;
   opacity: 0;
   transition: opacity 0.3s;
-
 }
 
 .icon-container:hover .hover-text {
   visibility: visible;
   opacity: 1;
 }
-
-h1{
-  position: relative;
-  top: -950px;
-  color: white;
-  text-align: center;
-  background: linear-gradient(to right, #ff4500, #ff6347);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 20px;
-  font-size: 40px;
-  animation: glowText 2s ease-in-out infinite;
-}
-
-@keyframes glowText{
-  0% {
-    text-shadow: 0 0 10px #ff4500;
-  }
-  50% {
-    text-shadow: 0 0 20px #ff4500;
-  }
-  100% {
-    text-shadow: 0 0 10px #ff4500;
-  }
-} 
