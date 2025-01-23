@@ -11,15 +11,24 @@ body {
   color: white;
   font-size: 4.5rem;
   text-align: center;
-  background: linear-gradient(
-      to right, 
-      #c94b30, #b95b3a, #e49b4d, #f29b49, #f4a261, 
-      #d86b3b, #ac4f32, #9b3b32, #933d3d
-  );
+  background: linear-gradient( to right, orange, red);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  animation: glowText 2s ease-in-out infinite;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px #ff4500;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff4500;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff4500;
+  }
 }
 
 .navbar{

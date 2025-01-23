@@ -12,6 +12,7 @@ body {
      text-align: center;
      position: relative;
      bottom: 5%;
+     top: 3px;
      background: linear-gradient( to right, orange, red);
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
@@ -86,7 +87,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-bottom: 130px;
+        margin-bottom: 270px;
         width: 100%;
         height: 100%;
     }
@@ -99,3 +100,46 @@ body {
         border: none; 
         border: orangered 2px solid;
     }
+
+ 
+  .icon-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: 700px;
+    right: 538px;
+  }
+  
+  .icon-container i {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin-left: 140px;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s ease-in-out;
+  }
+  
+  .icon-container i:hover {
+    color: #ff6347;
+  }
+  
+  .hover-text {
+    visibility: hidden;
+    width: 320px;
+    background-color: rgb(128, 47, 47);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    top: 65px;
+    left: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .icon-container:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+  }
