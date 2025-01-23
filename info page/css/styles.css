@@ -159,7 +159,7 @@ transition: all 0.3s ease-in-out;
   justify-content: center;
   height: 100%;
   position: relative;
-  bottom: 550px;
+  bottom: 500px;
 }
 
 .info-content h1{
