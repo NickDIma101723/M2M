@@ -116,10 +116,10 @@ body {
 }
 
 
-.movies-wrapper .btn1{
+.btn1{
   position: absolute;
   left: -120px;
-  bottom: 120px;
+  bottom: 80px;
   background: linear-gradient(45deg, #7f0f0f, #a93226);
   color: white;
   padding: 12px 25px;
@@ -142,7 +142,7 @@ body {
   background: linear-gradient(45deg, #d35400, #e67e22);
   position: absolute;
   right: -120px;
-  bottom: 115px;
+  bottom: 80px;
   box-shadow: 0 4px 15px rgba(211, 84, 0, 0.5);
   color: white;
   padding: 12px 25px;
