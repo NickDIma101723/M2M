@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cams</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="navbar">
+    <div class="sidebar">
+      <a href="../home page/home.html"><i class="fas fa-home"></i></a>
+      <a href="../flight page/flight.html"> <i class="fa-solid fa-plane-departure"></i></a>
+      <a href="../info page/info.html"><i class="fa-solid fa-circle-info"></i></a>
+      <a href="../gym/gym.html"><i class="fa-solid fa-dumbbell"></i></a>
+      <a href="../food page/food.html"><i class="fa-solid fa-utensils"></i></a>
+      <a href="../vr page/vr.html"><i class="fa-solid fa-vr-cardboard"></i></a>
+      <a href="#"><i class="fa-solid fa-gamepad"></i></a>
+      <a href="../cams/cams.html"><i class="fa-solid fa-camera-retro"></i></a>
+      <a href="../movie page/movie.html"><i class="fa-solid fa-film"></i></a>
+      <a href="../music/music.html"><i class="fa-solid fa-music"></i></a>
+      <a href="../ebooks/ebooks.html"><i class="fa-solid fa-book"></i></a>
+    </div>
+ </div>
+  <div class="main-content">
+    <h1>Cam feeds</h1>
+
+    <div class="tabs">
+      <button onclick="showTab('cam1', this)" id="btn-cam1" class="active">Cam 1</button>
+      <button onclick="showTab('cam2', this)" id="btn-cam2">Cam 2</button>
+      <button onclick="showTab('cam3', this)" id="btn-cam3">Cam 3</button>
+      <button onclick="showTab('cam4', this)" id="btn-cam4">Cam 4</button>
+    </div>
+
+    <div class="tab-content">
+      <div id="cam1" class="tab-content-item active">
+        <video controls autoplay loop>
+          <source src="videos/placeholders/videos/placeholder-16x9.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div id="cam2" class="tab-content-item">
+        <video controls autoplay loop>
+          <source src="videos/placeholders/videos/placeholder-16x9.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div id="cam3" class="tab-content-item">
+        <video controls autoplay loop>
+          <source src="videos/placeholders/videos/placeholder-16x9.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div id="cam4" class="tab-content-item">
+        <video controls autoplay loop>
+          <source src="videos/placeholders/videos/placeholder-16x9.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
