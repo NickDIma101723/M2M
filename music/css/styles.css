@@ -65,6 +65,31 @@ body {
   color: #ff4500;
 }
 
+h2 {
+  position: absolute;
+   bottom: 83%;
+   left: 46.5%;
+   color: white;
+   text-align: center;
+   background: linear-gradient( to right, orange, red);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 3rem;
+   animation: glowText 2s ease-in-out infinite;
+ }
+ 
+ @keyframes glowText {
+   0% {
+       text-shadow: 0 0 10px #ff4500;
+   }
+   50% {
+       text-shadow: 0 0 20px #ff4500;
+   }
+   100% {
+       text-shadow: 0 0 10px #ff4500;
+   }
+ }
+
 img{
   max-width: 200px;
   width: 100%;
