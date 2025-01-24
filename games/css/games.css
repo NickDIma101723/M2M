@@ -7,21 +7,6 @@ body {
     overflow: hidden;
   }
   
-  .container h1 {
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    background: linear-gradient(
-        to right, 
-        #c94b30, #b95b3a, #e49b4d, #f29b49, #f4a261, 
-        #d86b3b, #ac4f32, #9b3b32, #933d3d
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-  }
-  
   .navbar{
     position: absolute;
     left: 0;
@@ -68,7 +53,7 @@ body {
   h1 {
     position: absolute;
      bottom: 85%;
-     left: 42.5%;
+     left: 46.2%;
      color: white;
      text-align: center;
      background: linear-gradient( to right, orange, red);
@@ -89,38 +74,76 @@ body {
          text-shadow: 0 0 10px #ff4500;
      }
    }
-.btn{
-    position: absolute;
-    bottom: 100px;
-    left: 900px;
-    background-color: #ff4500;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .btn:hover {
-    background-color: #ff6347;
-}
 
-.btn2{
+.btn {
   position: absolute;
-  bottom: 100px;
-  left: 300px;
-  background-color: #ff4500;
+  bottom: 25px; 
+  left: 2%;
+  background-color: #D94F2D; 
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   cursor: pointer;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  transition: 0.3s ease-in-out;
+  font-size: 1.6rem;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #FF7F32; 
+}
+
+.btn2 {
+  position: absolute;
+  bottom: 25px; 
+  right: 2%;
+  background-color: #FF6A13; 
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn2:hover {
-  background-color: #ff6347;
+  background-color: #FF7F32;
 }
+
+
+.game-card {
+  border: 8px solid #B35B2C; 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 150px;
+  left: 50.5%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  max-width: 380px;
+  height: 500px;
+  padding: 30px;
+  background-color: #F2B97F; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  overflow: hidden;
+}
+
+.game-card h2 {
+  font-size: 2.2rem;
+  color: #4A2C20; 
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.game-image img {
+  width: 100%; 
+  height: auto;
+  border-radius: 55px;
+  margin-bottom: 20px; 
+  border: 3px solid #B35B2C; 
+}
+
+

@@ -1,6 +1,5 @@
 window.addEventListener("DOMContentLoaded", game);
 
-// General sprite load
 var sprite = new Image();
 var spriteExplosion = new Image();
 sprite.src = 'https://marclopezavila.github.io/planet-defense-game/img/sprite.png';
@@ -9,15 +8,12 @@ window.onload = function() {
     spriteExplosion.src = 'https://marclopezavila.github.io/planet-defense-game/img/explosion.png';
 };
 
-// Game function
 function game() {
-    // Canvas setup
     var canvas = document.getElementById('canvas'),
         ctx    = canvas.getContext('2d'),
         cH     = ctx.canvas.height = window.innerHeight,
         cW     = ctx.canvas.width  = window.innerWidth ;
 
-    // Game variables
     var bullets    = [],
         asteroids  = [],
         explosions = [],
@@ -28,7 +24,6 @@ function game() {
         gameOver   = false,
         _planet    = {deg: 0};
 
-    // Player setup
     var player = {
         posX   : -35,
         posY   : -(100+82),
@@ -37,23 +32,19 @@ function game() {
         deg    : 0
     };
 
-    // Event listeners for interaction
     canvas.addEventListener('click', action);
     canvas.addEventListener('mousemove', action);
     window.addEventListener("resize", update);
 
-    // Update canvas size on window resize
     function update() {
         cH = ctx.canvas.height = window.innerHeight;
         cW = ctx.canvas.width  = window.innerWidth ;
     }
 
-    // Move the player based on mouse movement
     function move(e) {
         player.deg = Math.atan2(e.offsetX - (cW/2), -(e.offsetY - (cH/2)));
     }
 
-    // Action on mouse events
     function action(e) {
         e.preventDefault();
         if(playing) {
@@ -115,14 +106,11 @@ function game() {
         }
     }
 
-    // Game start function
     function start() {
         if(!gameOver) {
-            // Clear canvas
             ctx.clearRect(0, 0, cW, cH);
             ctx.beginPath();
 
-            // Planet and player drawing
             planet();
             _player();
 
@@ -172,7 +160,6 @@ function game() {
         }
     }
 
-    // Initialize game
     function init() {
         window.requestAnimationFrame(init);
         start();
@@ -180,10 +167,7 @@ function game() {
 
     init();
 
-    // Utility function to generate random numbers
     function random(from, to) {
         return Math.floor(Math.random() * (to - from + 1)) + from;
     }
-
-    // Additional game logic here...
 }
