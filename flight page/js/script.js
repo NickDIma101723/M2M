@@ -8,7 +8,7 @@ let temperature = -100;
 
 function updateStats(){
     if (fuelLevel > 0){
-        fuelLevel -= 0.01;
+        fuelLevel -= 0.05;
     }
     
     document.getElementById("fuel").innerText = `Fuel level: ${fuelLevel.toFixed(2)}%`;
@@ -20,7 +20,7 @@ function updateStats(){
 
     if (fuelLevel > 0){
         orbitSpeed +=10;
-        thrusterOutput -= 0.01;
+        thrusterOutput -= 0.05;
     }
 
     if (thrusterOutput < 0){

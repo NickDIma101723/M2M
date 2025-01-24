@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>games</title>
-   <link rel="stylesheet" href="css/games.css">
-   <script src="js/gmaes.js"></script>
+    <title>Games</title>
+    <link rel="stylesheet" href="css/games.css">
+    <script src="js/script.js"></script>
     <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         rel="stylesheet"
@@ -27,8 +27,47 @@
           <a href="#"><i class="fa-solid fa-music"></i></a>
           <a href="../ebooks/ebooks.html"><i class="fa-solid fa-book"></i></a>
         </div>
-     </div>
-     <h1 id="text">Games</h1>
-     
-     <canvas id="canvas"></canvas>
-     <a href="https://codepen.io/Loopez10/full/dMaVdQ" class="full-screen" target="_blank"></a>
+    </div>
+    
+    <h1 id="text">Games</h1>
+
+    <!-- Buttons to open and close the game -->
+    <button class="btn" id="openGameButton">Play Game</button>
+    <button class="btn2" id="closeGameButton" disabled>Close Game</button> <!-- Initially disabled -->
+
+    <script>
+        let gameWindow = null; // Reference to the opened game window
+    
+        // Function to calculate the position to center the game window
+        function openCenteredWindow(url, name, width, height) {
+            // Get the current screen width and height
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+    
+            // Calculate the position of the window (center of the screen)
+            const left = (screenWidth - width) / 2;
+            const top = (screenHeight - height) / 2;
+    
+            // Open the window with the calculated position
+            return window.open(url, name, `width=${width},height=${height},top=${top},left=${left},scrollbars=yes`);
+        }
+    
+        // Open the game in a centered window when the Play button is clicked
+        document.getElementById('openGameButton').addEventListener('click', function() {
+            gameWindow = openCenteredWindow('https://codepen.io/Loopez10/full/dMaVdQ', 'GameWindow', 800, 600);
+            
+            // Enable the "Close Game" button once the game is opened
+            document.getElementById('closeGameButton').disabled = false;
+        });
+    
+        // Close the game window when the Close button is clicked
+        document.getElementById('closeGameButton').addEventListener('click', function() {
+            if (gameWindow) {
+                gameWindow.close();
+                gameWindow = null; // Clear the reference
+                document.getElementById('closeGameButton').disabled = true; // Disable the button again
+            }
+        });
+    </script>
+</body>
+</html>

@@ -64,21 +64,63 @@ body {
     transform: scale(1.2);
     color: #ff4500;
   }
-  #text{
-    position: absolute;
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-    background: linear-gradient(
-        to right, 
-        #c94b30, #b95b3a, #e49b4d, #f29b49, #f4a261, 
-        #d86b3b, #ac4f32, #9b3b32, #933d3d
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    bottom: 800px;
-    left: 900px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);}
-    
 
+  h1 {
+    position: absolute;
+     bottom: 85%;
+     left: 42.5%;
+     color: white;
+     text-align: center;
+     background: linear-gradient( to right, orange, red);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-size: 3rem;
+     animation: glowText 2s ease-in-out infinite;
+   }
+   
+   @keyframes glowText {
+     0% {
+         text-shadow: 0 0 10px #ff4500;
+     }
+     50% {
+         text-shadow: 0 0 20px #ff4500;
+     }
+     100% {
+         text-shadow: 0 0 10px #ff4500;
+     }
+   }
+.btn{
+    position: absolute;
+    bottom: 100px;
+    left: 900px;
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #ff6347;
+}
+
+.btn2{
+  position: absolute;
+  bottom: 100px;
+  left: 300px;
+  background-color: #ff4500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn2:hover {
+  background-color: #ff6347;
+}
